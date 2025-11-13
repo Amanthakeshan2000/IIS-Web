@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import Nav from './Nav';
 export default function Header({ variant }) {
   const [mobileToggle, setMobileToggle] = useState(false);
-  const [searchToggle, setSearchToggle] = useState(false);
   const [isSticky, setIsSticky] = useState();
   const [prevScrollPos, setPrevScrollPos] = useState(0);
 

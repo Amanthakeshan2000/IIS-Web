@@ -1,6 +1,5 @@
 import React from 'react';
 import Service from '../../Service';
-import ServiceInfo from '../../ServiceInfo';
 import SectionHeading from '../../SectionHeading';
 
 export default function ServiceSection({

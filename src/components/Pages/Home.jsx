@@ -1,17 +1,11 @@
 import { useEffect } from 'react';
-import { pageTitle } from '../../helpers/PageTitle';
 import Section from '../Section';
 import AboutUsSection from '../Section/AboutSection';
-import BrandSection from '../Section/BrandSection';
 import ContactSection from '../Section/ContactSection';
 import HeroSection from '../Section/HeroSection';
 import MovingTextSection from '../Section/MovingTextSection';
-import PortfolioSection from '../Section/PortfolioSection';
-import PostSection from '../Section/PostSection';
 import ServiceSection from '../Section/ServiceSection';
 import TeamSection from '../Section/TeamSection';
-import TestimonialSection from '../Section/TestimonialSection';
-import WhyChooseUsSection from '../Section/WhyChooseUsSection';
 
 const heroData = [
   {
@@ -68,93 +62,6 @@ const serviceData = [
   },
 ];
 
-const portfolioData = [
-  {
-    imgUrl: '/images/portfolio_1.jpeg',
-    title: 'Marketing Web-design',
-    projectUrl: '/portfolio/portfolio-details',
-  },
-  {
-    imgUrl: '/images/portfolio_2.jpeg',
-    title: 'Marketing Web-design',
-    projectUrl: '/portfolio/portfolio-details',
-  },
-  {
-    imgUrl: '/images/portfolio_3.jpeg',
-    title: 'Marketing Web-design',
-    projectUrl: '/portfolio/portfolio-details',
-  },
-  {
-    imgUrl: '/images/portfolio_4.jpeg',
-    title: 'Marketing Web-design',
-    projectUrl: '/portfolio/portfolio-details',
-  },
-  {
-    imgUrl: '/images/portfolio_3.jpeg',
-    title: 'Marketing Web-design',
-    projectUrl: '/portfolio/portfolio-details',
-  },
-];
-
-const testimonialData = [
-  {
-    imgUrl: '/images/avatar_1.png',
-    rating: '5',
-    desc: "I've been using [business name] for the past year and I'm so glad I did. Their products and services are top-notch and their customer service is amazing. I would highly recommend them to anyone",
-    name: 'Darlene Robertson',
-    designation: 'Web design',
-  },
-  {
-    imgUrl: '/images/avatar_2.png',
-    rating: '4.5',
-    desc: "I've been using [business name] for the past year and I'm so glad I did. Their products and services are top-notch and their customer service is amazing. I would highly recommend them to anyone",
-    name: 'Peter Johnson',
-    designation: 'Web design',
-  },
-  {
-    imgUrl: '/images/avatar_3.png',
-    rating: '4.5',
-    desc: "I've been using [business name] for the past year and I'm so glad I did. Their products and services are top-notch and their customer service is amazing. I would highly recommend them to anyone",
-    name: 'Max Lawrence',
-    designation: 'Web design',
-  },
-  {
-    imgUrl: '/images/avatar_4.png',
-    rating: '4',
-    desc: "I've been using [business name] for the past year and I'm so glad I did. Their products and services are top-notch and their customer service is amazing. I would highly recommend them to anyone",
-    name: 'Darlene Robertson',
-    designation: 'Web design',
-  },
-  {
-    imgUrl: '/images/avatar_1.png',
-    rating: '5',
-    desc: "I've been using [business name] for the past year and I'm so glad I did. Their products and services are top-notch and their customer service is amazing. I would highly recommend them to anyone",
-    name: 'Darlene Robertson',
-    designation: 'Web design',
-  },
-  {
-    imgUrl: '/images/avatar_2.png',
-    rating: '4.5',
-    desc: "I've been using [business name] for the past year and I'm so glad I did. Their products and services are top-notch and their customer service is amazing. I would highly recommend them to anyone",
-    name: 'Peter Johnson',
-    designation: 'Web design',
-  },
-  {
-    imgUrl: '/images/avatar_3.png',
-    rating: '4.5',
-    desc: "I've been using [business name] for the past year and I'm so glad I did. Their products and services are top-notch and their customer service is amazing. I would highly recommend them to anyone",
-    name: 'Max Lawrence',
-    designation: 'Web design',
-  },
-  {
-    imgUrl: '/images/avatar_4.png',
-    rating: '4',
-    desc: "I've been using [business name] for the past year and I'm so glad I did. Their products and services are top-notch and their customer service is amazing. I would highly recommend them to anyone",
-    name: 'Darlene Robertson',
-    designation: 'Web design',
-  },
-];
-
 const teamData = [
   {
     imgUrl: '/images/team_member_1.jpeg',
@@ -173,47 +80,6 @@ const teamData = [
     name: 'Agile',
     designation: 'We take an iterative, real-world approach to problem-solving. By adapting quickly, testing ideas in practice, and learning continuously, we deliver solutions that are both practical and impactful.',
     srcUrl: '/team/team-details',
-  },
-];
-
-const brandData = [
-  { imgUrl: '/images/brand_1.svg' },
-  { imgUrl: '/images/brand_2.svg' },
-  { imgUrl: '/images/brand_3.svg' },
-  { imgUrl: '/images/brand_4.svg' },
-  { imgUrl: '/images/brand_5.svg' },
-];
-
-const postData = [
-  {
-    imgUrl: '/images/post_1.jpeg',
-    title: 'What services does your business provide?',
-    desc: 'We provide a range of digital marketing lutions including website design.',
-    postUrl: '/blog/blog-details',
-    postedBy: 'Admin',
-    adminUrl: '/',
-    numberOfComment: 3,
-    commentUrl: '/blog/blog-details',
-  },
-  {
-    imgUrl: '/images/post_2.jpeg',
-    title: 'Introducing the latest tech features for you',
-    desc: 'We provide a range of digital marketing lutions including website design.',
-    postUrl: '/blog/blog-details',
-    postedBy: 'Admin',
-    adminUrl: '/',
-    numberOfComment: 4,
-    commentUrl: '/blog/blog-details',
-  },
-  {
-    imgUrl: '/images/post_3.jpeg',
-    title: 'The creative studio programm coming soon',
-    desc: 'We provide a range of digital marketing lutions including website design.',
-    postUrl: '/blog/blog-details',
-    postedBy: 'Admin',
-    adminUrl: '/',
-    numberOfComment: 5,
-    commentUrl: '/blog/blog-details',
   },
 ];
 

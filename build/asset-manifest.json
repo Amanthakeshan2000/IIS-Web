@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cacb56bb.css",
+    "main.js": "/static/js/main.31684f79.js",
+    "index.html": "/index.html",
+    "static/media/hero_highlight_shape.svg": "/static/media/hero_highlight_shape.919b7ed1099e6a5b7cc4.svg",
+    "static/media/video_block_text_shape.svg": "/static/media/video_block_text_shape.4ea40d833da4aac27426.svg",
+    "main.cacb56bb.css.map": "/static/css/main.cacb56bb.css.map",
+    "main.31684f79.js.map": "/static/js/main.31684f79.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cacb56bb.css",
+    "static/js/main.31684f79.js"
+  ]
+}

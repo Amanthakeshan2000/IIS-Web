@@ -4,14 +4,6 @@ import Hero from '../Hero';
 export default function HeroSlider({ data }) {
   const sliderRef = useRef(null);
 
-  const next = () => {
-    sliderRef.current.slickNext();
-  };
-
-  const previous = () => {
-    sliderRef.current.slickPrev();
-  };
-
   const settings = {
     dots: false,
     infinite: true,

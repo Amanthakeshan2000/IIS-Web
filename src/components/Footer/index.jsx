@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import SocialBtns from '../../components/SocialBtns';
 import MenuWidget from '../Widget/MenuWidget';
 import NewsLetterWidget from '../Widget/NewsLetterWidget';
@@ -32,7 +31,7 @@ export default function Footer() {
               Send Email
             </h3>
             <h2 className="text-white fw-medium m-0 cs_fs_22">
-              <a href="#">(Email)</a>
+              <a href="mailto:contact@example.com">(Email)</a>
             </h2>
           </div>
         </div>

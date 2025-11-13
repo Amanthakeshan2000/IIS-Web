@@ -1,5 +1,4 @@
 import SectionHeadingStyle3 from '../../SectionHeading/SectionHeadingStyle3';
-import VideoBlock from '../../VideoBlock';
 import Button from '../../Button';
 import { Icon } from '@iconify/react';
 

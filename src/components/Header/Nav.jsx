@@ -1,5 +1,4 @@
 import React from 'react';
-import DropDown from './DropDown';
 import { Link } from 'react-router-dom';
 
 export default function Nav({ setMobileToggle }) {
