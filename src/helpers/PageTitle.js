@@ -1,4 +1,4 @@
 export const pageTitle = title => {
   return (document.title =
-    title + '| Industry Solutions Space');
+    title + ' | Industry Solutions Space');
 };
