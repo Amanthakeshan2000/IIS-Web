@@ -34,7 +34,7 @@ const serviceData = [
     subTitle:
       'Ensuring businesses are audit-ready and compliant with national and international quality standards.',
     imgUrl: '/images/service_10.png',
-    href: '/service/services-details',
+    href: '/',
   },
   {
     iconUrl: '/images/icons/service_icon_2.svg',
@@ -42,7 +42,7 @@ const serviceData = [
     subTitle:
       'Combining deep technical expertise with a clear understanding of operational needs.',
     imgUrl: '/images/service_10.png',
-    href: '/service/services-details',
+    href: '/',
   },
   {
     iconUrl: '/images/icons/service_icon_3.svg',
@@ -50,7 +50,7 @@ const serviceData = [
     subTitle:
       'Building robust, efficient, and continuously improving operations through structured systems.',
     imgUrl: '/images/service_10.png',
-    href: '/service/services-details',
+    href: '/',
   },
   {
     iconUrl: '/images/icons/service_icon_4.svg',
@@ -58,7 +58,7 @@ const serviceData = [
     subTitle:
       'Providing end-to-end solutions across business management, operational excellence, and quality assurance.',
     imgUrl: '/images/service_10.png',
-    href: '/service/services-details',
+    href: '/',
   },
 ];
 
