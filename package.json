@@ -1,5 +1,5 @@
 {
-  "name": "bizmax-react",
+  "name": "iis",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
@@ -24,7 +24,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start --port 3000",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

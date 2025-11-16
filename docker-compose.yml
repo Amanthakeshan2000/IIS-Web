@@ -1,0 +1,77 @@
+services:
+  iis:
+    container_name: iis
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        - BUILDKIT_INLINE_CACHE=1
+    image: techwire/iis:latest
+    restart: unless-stopped
+
+    # Security settings
+    security_opt:
+      - no-new-privileges:true
+    read_only: false # Set to true if app doesn't need write access to root filesystem
+    tmpfs:
+      - /tmp
+      - /var/tmp
+    cap_drop:
+      - ALL
+    cap_add:
+      - CHOWN
+      - DAC_OVERRIDE
+      - FOWNER
+      - SETGID
+      - SETUID
+
+    ports:
+      - "3000:3000"
+
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          'node -e "require(''http'').get(''http://127.0.0.1:3000'', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)}).on(''error'', () => process.exit(1))" || exit 1',
+        ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+    # Resource limits
+    deploy:
+      resources:
+        limits:
+          cpus: "2.0"
+          memory: 2G
+        reservations:
+          cpus: "0.5"
+          memory: 512M
+
+    # Logging configuration
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+        labels: "production"
+
+    # Labels for monitoring and management
+    labels:
+      - "com.techwire.app=iis"
+      - "com.techwire.environment=production"
+      - "com.techwire.version=latest"
+      - "com.techwire.managed=true"
+
+    # DNS configuration for better network resolution
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+
+    # Stop grace period
+    stop_grace_period: 30s
