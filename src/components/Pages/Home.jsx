@@ -67,19 +67,19 @@ const teamData = [
     imgUrl: '/images/team_member_1.jpeg',
     name: 'Curious',
     designation: 'We explore, understand, connect, and imagine possibilities — always asking how things could be better or different. We embrace "constructive discontent", challenging the status quo to uncover innovative solutions for our clients.',
-    srcUrl: '/team/team-details',
+    srcUrl: '/',
   },
   {
     imgUrl: '/images/team_member_2.jpeg',
     name: 'Inclusive',
     designation: 'We draw on diverse talent, perspectives, and experiences to strengthen our ideas. By combining individual insight with collaborative teamwork, we ensure that the best solutions come from everyone working together.',
-    srcUrl: '/team/team-details',
+    srcUrl: '/',
   },
   {
     imgUrl: '/images/team_member_3.jpeg',
     name: 'Agile',
     designation: 'We take an iterative, real-world approach to problem-solving. By adapting quickly, testing ideas in practice, and learning continuously, we deliver solutions that are both practical and impactful.',
-    srcUrl: '/team/team-details',
+    srcUrl: '/',
   },
 ];
 
