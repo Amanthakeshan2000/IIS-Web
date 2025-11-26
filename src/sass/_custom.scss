@@ -1,6 +1,10 @@
-.cs_nav .cs_nav_list span.cs-munu_dropdown_toggle.active + ul,
-.cs_nav .cs-munu_toggle.cs_teggle_active + .cs_nav_list {
+.cs_nav .cs_nav_list span.cs-munu_dropdown_toggle.active + ul {
   display: block;
+}
+
+/* Mobile menu toggle - when header has active class */
+.cs_site_header.cs_mobile_toggle_active .cs_nav .cs_nav_list {
+  display: block !important;
 }
 
 .cs_site_header.cs_color_1 {

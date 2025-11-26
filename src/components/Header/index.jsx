@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Nav from './Nav';
 export default function Header({ variant }) {
   const [mobileToggle, setMobileToggle] = useState(false);
   const [isSticky, setIsSticky] = useState();
   const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const headerRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,8 +26,31 @@ export default function Header({ variant }) {
     };
   }, [prevScrollPos]);
 
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (headerRef.current && !headerRef.current.contains(event.target) && mobileToggle) {
+        setMobileToggle(false);
+      }
+    };
+
+    if (mobileToggle) {
+      document.addEventListener('mousedown', handleClickOutside);
+      // Prevent body scroll when menu is open
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.body.style.overflow = '';
+    };
+  }, [mobileToggle]);
+
   return (
     <header
+      ref={headerRef}
       className={`cs_site_header cs_style_1 ${
         variant ? variant : ''
       } cs_sticky_header cs_site_header_full_width ${

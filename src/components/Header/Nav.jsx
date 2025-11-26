@@ -2,25 +2,31 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Nav({ setMobileToggle }) {
+  const handleLinkClick = () => {
+    if (setMobileToggle) {
+      setMobileToggle(false);
+    }
+  };
+
   return (
     <ul className="cs_nav_list fw-medium text-uppercase">
       <li>
-        <Link to="/">Home</Link>
+        <Link to="/" onClick={handleLinkClick}>Home</Link>
       </li>
       <li>
-        <Link to="/about" onClick={() => setMobileToggle(false)}>
+        <Link to="/about" onClick={handleLinkClick}>
           About Us
         </Link>
       </li>
      
       <li>
-        <Link to="/service" onClick={() => setMobileToggle(false)}>
+        <Link to="/service" onClick={handleLinkClick}>
           Services
         </Link>
       </li>
 
       <li>
-        <Link to="/contact" onClick={() => setMobileToggle(false)}>
+        <Link to="/contact" onClick={handleLinkClick}>
           Contact
         </Link>
       </li>
